@@ -2,7 +2,16 @@
 <html>
 <body>
 
-<iframe src="https://www.w3schools.com">
+<script>
+window.setInterval("reloadIFrame();", 60000);
+
+function reloadIFrame() {
+ // document.frames["bdd"].location.reload();
+ document.getElementById("bdd").src = "http://jenkins.cloud-band.com/view/CBND/view/DEV/job/cbnd-build/Serenity_Single_BDD_Report/";
+}
+</script>
+
+<iframe id="bdd" name="bdd" style="position: relative; top: -393px;"  height="1080" width="1032" src="http://jenkins.cloud-band.com/view/CBND/view/DEV/job/cbnd-build/Serenity_Single_BDD_Report/">
   <p>Your browser does not support iframes.</p>
 </iframe>
 
